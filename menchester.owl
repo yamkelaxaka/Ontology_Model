@@ -1,0 +1,417 @@
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD>
+
+
+AnnotationProperty: rdfs:comment
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: rdfs:Literal
+
+    
+Datatype: xsd:decimal
+
+    
+Datatype: xsd:double
+
+    
+Datatype: xsd:integer
+
+    
+ObjectProperty: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment>
+
+    
+ObjectProperty: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasDomain>
+
+    
+ObjectProperty: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailBody>
+
+    
+ObjectProperty: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailSenderAddress>
+
+    
+ObjectProperty: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasGrammer>
+
+    
+ObjectProperty: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasLink>
+
+    
+ObjectProperty: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasSubject>
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: owl:topObjectProperty
+
+    
+DataProperty: owl:topDataProperty
+
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Audio>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailAttachments>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Docx>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailAttachments>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Email>
+
+    EquivalentTo: 
+        owl:Thing
+         and (<http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailAttachments>)
+         and (<http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailBody> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailBody>)
+         and (<http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasGrammer> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Grammer>)
+         and (<http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasDomain> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailDomain>)
+         and (<http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailSenderAddress> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailSenderAddress>)
+         and (<http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasSubject> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailSubject>)
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailAttachments>
+
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailBody>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailComponents>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailComponents>
+
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailDomain>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailComponents>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailInstances>
+
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailProperties>
+
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailSenderAddress>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailComponents>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailSubject>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailComponents>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Exe>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailAttachments>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#GenericGreeting>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailBody>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#GoodDomain>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailDomain>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#GoodGrammer>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Grammer>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#GoodLink>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Link>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#GoodSubject>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailSubject>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#GoogleArAutoBot>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailInstances>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Audio>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Docx>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailAttachments>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailBody> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailBody>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailBody> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Threats>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasGrammer> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Grammer>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasGrammer> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#GrammerMistakes>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasDomain> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailDomain>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailSenderAddress> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailSenderAddress>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasSubject> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailSubject>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Grammer>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailProperties>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#GrammerMistakes>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Grammer>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Health.gov.za>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailInstances>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailAttachments>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Exe>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Zip>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailBody> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailBody>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasGrammer> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Grammer>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasGrammer> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#GrammerMistakes>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasSubject> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#SenseOfUrgency>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasDomain> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailDomain>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailSenderAddress> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailSenderAddress>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasSubject> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailSubject>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#HighProbability>
+
+    EquivalentTo: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#PhishingEmail>
+         and (<http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Exe>)
+         and (<http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Zip>)
+         and (<http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasSubject> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#SenseOfUrgency>)
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#ICSCommunications>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailInstances>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Docx>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailAttachments>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailBody> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailBody>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasGrammer> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#GoodGrammer>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasGrammer> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Grammer>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasDomain> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailDomain>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailSenderAddress> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailSenderAddress>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasSubject> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailSubject>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Image>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailAttachments>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Link>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailProperties>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#LinkedInJobAlert>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailInstances>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Docx>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailAttachments>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailBody> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailBody>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasGrammer> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#GoodGrammer>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasGrammer> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Grammer>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasDomain> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailDomain>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailSenderAddress> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailSenderAddress>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasSubject> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailSubject>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#LowProbability>
+
+    EquivalentTo: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#PhishingEmail>
+         and (<http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Image>)
+         and (<http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Video>)
+         and (<http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailBody> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#GenericGreeting>)
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#MediumProbability>
+
+    EquivalentTo: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#PhishingEmail>
+         and (<http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Audio>)
+         and (<http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Docx>)
+         and (<http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailBody> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Threats>)
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#MismatchedDomain>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailDomain>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#NormalEmail>
+
+    EquivalentTo: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Email>
+         and (<http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Docx>)
+         and (<http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailBody> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailBody>)
+         and (<http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasGrammer> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#GoodGrammer>)
+    
+    DisjointWith: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#PhishingEmail>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#PDF>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailAttachments>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#PayPal>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailInstances>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailAttachments>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Exe>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Zip>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailBody> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailBody>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasGrammer> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Grammer>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasGrammer> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#GrammerMistakes>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasSubject> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#SenseOfUrgency>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasDomain> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailDomain>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailSenderAddress> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailSenderAddress>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasSubject> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailSubject>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#PhishingEmail>
+
+    EquivalentTo: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Email>
+         and (<http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasGrammer> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#GrammerMistakes>)
+    
+    DisjointWith: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#NormalEmail>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#SACovid19Vaccination>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailInstances>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailAttachments>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Image>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Video>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailBody> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailBody>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailBody> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#GenericGreeting>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasGrammer> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Grammer>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasGrammer> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#GrammerMistakes>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasDomain> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailDomain>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailSenderAddress> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailSenderAddress>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasSubject> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailSubject>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#SalaryFormUwc>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailInstances>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Audio>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Docx>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailAttachments>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Exe>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#PDF>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Zip>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasDomain> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#MismatchedDomain>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailBody> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailBody>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailBody> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#GenericGreeting>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailBody> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Threats>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasGrammer> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailSenderAddress>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasGrammer> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Grammer>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasGrammer> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#GrammerMistakes>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasLink> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#SuspiciousLink>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasSubject> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailProperties>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasSubject> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#SuspiciousSubject>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasDomain> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailDomain>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailSenderAddress> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailSenderAddress>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasSubject> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailSubject>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#SenseOfUrgency>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailSubject>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#SuspiciousLink>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Link>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#SuspiciousSubject>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailSubject>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Threats>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailBody>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#UWCCommunications>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailInstances>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Docx>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasAttachment> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailAttachments>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailBody> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailBody>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasGrammer> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#GoodGrammer>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasGrammer> some <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Grammer>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasDomain> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailDomain>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasEmailSenderAddress> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailSenderAddress>,
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#hasSubject> exactly 1 <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailSubject>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Video>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailAttachments>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#Zip>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailAttachments>
+    
+    
+Class: <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#xlsxFile>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/cshons26/ontologies/2019/CKD#EmailAttachments>
+    
+    
+Class: owl:Thing
+
+    
